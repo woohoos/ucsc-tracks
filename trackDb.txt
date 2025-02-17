@@ -1,4 +1,13 @@
 # Collection: B32
+track acetylation_12_24h
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/acetylation_12_24h.bw
+type bigWig
+shortLabel acetylation_12_24h
+longLabel acetylation_12_24h (B32)
+color 63,127,9
+visibility full
+
+# Collection: B32
 track acetylation_pvalues
 bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/acetylation_pvalues.bw
 type bigWig

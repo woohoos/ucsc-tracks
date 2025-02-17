@@ -22,10 +22,14 @@ for (folder in track_dirs) {
   
   track_db <- c(track_db,
                 paste0("track ", super_track_name),
-                paste0("superTrack on"),
+                "superTrack on",
+                "group custom",
                 paste0("shortLabel ", folder_name, " Collection"),
                 paste0("longLabel Group: ", folder_name),
                 "visibility full",
+                "aggregate transparentOverlay",  # Grouped auto-scaling
+                "autoScale on",  # Scale based on visible tracks
+                "maxHeightPixels 100:50:20",  # Height of the tracks
                 ""
   )
   
@@ -40,7 +44,7 @@ for (folder in track_dirs) {
     
     if (grepl("methylation", track, ignore.case = TRUE)) {
       track_color <- color_blue
-    } else if (grepl("pvalue|kontrol", track, ignore.case = TRUE)) {
+    } else if (grepl("pvalue|control|kontrol", track, ignore.case = TRUE)) {
       track_color <- color_red
     } else if (grepl("acetylation", track, ignore.case = TRUE)) {
       track_color <- color_green

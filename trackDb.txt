@@ -1,8 +1,12 @@
 track super_B32
 superTrack on
+group custom
 shortLabel B32 Collection
 longLabel Group: B32
 visibility full
+aggregate transparentOverlay
+autoScale on
+maxHeightPixels 100:50:20
 
 track acetylation_12_24h
 parent super_B32 on
@@ -28,15 +32,6 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel methylation_12_24h
 longLabel methylation_12_24h (B32)
-color 0,0,255
-visibility full
-
-track methylationh
-parent super_B32 on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylationh.bw
-type bigWig
-shortLabel methylationh
-longLabel methylationh (B32)
 color 0,0,255
 visibility full
 

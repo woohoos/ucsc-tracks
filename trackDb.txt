@@ -1,28 +1,36 @@
+# Collection: B32
 track acetylation_pvalues
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/acetylation_pvalues.bw
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/tracks/B32/acetylation_pvalues.bw
 type bigWig
 shortLabel acetylation_pvalues
-longLabel acetylation_pvalues data
+longLabel acetylation_pvalues (B32)
+color 255,0,0
 visibility full
 
+# Collection: B32
 track methylation_12_24h
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/methylation_12_24h.bw
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/tracks/B32/methylation_12_24h.bw
 type bigWig
 shortLabel methylation_12_24h
-longLabel methylation_12_24h data
+longLabel methylation_12_24h (B32)
+color 0,0,255
 visibility full
 
+# Collection: B32
 track methylation_pvalues
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/methylation_pvalues.bw
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/tracks/B32/methylation_pvalues.bw
 type bigWig
 shortLabel methylation_pvalues
-longLabel methylation_pvalues data
+longLabel methylation_pvalues (B32)
+color 0,0,255
 visibility full
 
+# Collection: B32
 track methylationh
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/methylationh.bw
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/tracks/B32/methylationh.bw
 type bigWig
 shortLabel methylationh
-longLabel methylationh data
+longLabel methylationh (B32)
+color 0,0,255
 visibility full
 

@@ -17,15 +17,6 @@ longLabel acetylation_12_24h (B32)
 color 63,127,9
 visibility full
 
-track acetylation_pvalues
-parent super_B32 on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/acetylation_pvalues.bw
-type bigWig
-shortLabel acetylation_pvalues
-longLabel acetylation_pvalues (B32)
-color 255,0,0
-visibility full
-
 track methylation_12_24h
 parent super_B32 on
 bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylation_12_24h.bw
@@ -177,7 +168,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M1_N-B32.7
 longLabel BW_M1_N-B32.7 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M10_N-B32.8
@@ -186,7 +177,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M10_N-B32.8
 longLabel BW_M10_N-B32.8 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M11_N-B32.4
@@ -195,7 +186,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M11_N-B32.4
 longLabel BW_M11_N-B32.4 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M12_N-B32.6
@@ -204,7 +195,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M12_N-B32.6
 longLabel BW_M12_N-B32.6 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M2_N-B32.11
@@ -213,7 +204,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M2_N-B32.11
 longLabel BW_M2_N-B32.11 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M3_N-B32.2
@@ -222,7 +213,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M3_N-B32.2
 longLabel BW_M3_N-B32.2 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M4_N-B32.5
@@ -231,7 +222,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M4_N-B32.5
 longLabel BW_M4_N-B32.5 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M5_N-B32.9
@@ -240,7 +231,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M5_N-B32.9
 longLabel BW_M5_N-B32.9 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M6_N-B32.12
@@ -249,7 +240,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M6_N-B32.12
 longLabel BW_M6_N-B32.12 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M7_N-B32.3
@@ -258,7 +249,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M7_N-B32.3
 longLabel BW_M7_N-B32.3 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M8_N-B32.10
@@ -267,7 +258,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M8_N-B32.10
 longLabel BW_M8_N-B32.10 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 
 track BW_M9_N-B32.1
@@ -276,6 +267,6 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_M9_N-B32.1
 longLabel BW_M9_N-B32.1 (B32_raw)
-color 0,0,0
+color 0,0,255
 visibility full
 

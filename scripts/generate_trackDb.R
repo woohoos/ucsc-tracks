@@ -42,11 +42,11 @@ for (folder in track_dirs) {
     
     track_path <- paste0(folder, "/", track)
     
-    if (grepl("methylation", track, ignore.case = TRUE)) {
+    if (grepl("methylation|M", track, ignore.case = TRUE)) {
       track_color <- color_blue
-    } else if (grepl("pvalue|control|kontrol", track, ignore.case = TRUE)) {
+    } else if (grepl("pvalue|control|kontrol|^M", track, ignore.case = TRUE)) {
       track_color <- color_red
-    } else if (grepl("acetylation", track, ignore.case = TRUE)) {
+    } else if (grepl("acetylation|^A", track, ignore.case = TRUE)) {
       track_color <- color_green
     } else {
       track_color <- color_default

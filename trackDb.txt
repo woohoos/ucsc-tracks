@@ -1,5 +1,11 @@
-# Collection: B32
+track super_B32
+superTrack on
+shortLabel B32 Collection
+longLabel Group: B32
+visibility full
+
 track acetylation_12_24h
+parent super_B32 on
 bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/acetylation_12_24h.bw
 type bigWig
 shortLabel acetylation_12_24h
@@ -7,8 +13,8 @@ longLabel acetylation_12_24h (B32)
 color 63,127,9
 visibility full
 
-# Collection: B32
 track acetylation_pvalues
+parent super_B32 on
 bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/acetylation_pvalues.bw
 type bigWig
 shortLabel acetylation_pvalues
@@ -16,8 +22,8 @@ longLabel acetylation_pvalues (B32)
 color 255,0,0
 visibility full
 
-# Collection: B32
 track methylation_12_24h
+parent super_B32 on
 bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylation_12_24h.bw
 type bigWig
 shortLabel methylation_12_24h
@@ -25,17 +31,8 @@ longLabel methylation_12_24h (B32)
 color 0,0,255
 visibility full
 
-# Collection: B32
-track methylation_pvalues
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylation_pvalues.bw
-type bigWig
-shortLabel methylation_pvalues
-longLabel methylation_pvalues (B32)
-color 0,0,255
-visibility full
-
-# Collection: B32
 track methylationh
+parent super_B32 on
 bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylationh.bw
 type bigWig
 shortLabel methylationh

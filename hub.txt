@@ -1,0 +1,5 @@
+hub MyGitHubTrackHub
+shortLabel GitHub Tracks
+longLabel UCSC Custom Tracks from GitHub
+genomesFile genomes.txt
+email mariuslt20@gmail.com

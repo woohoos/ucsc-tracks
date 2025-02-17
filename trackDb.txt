@@ -1,0 +1,28 @@
+track acetylation_pvalues
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/acetylation_pvalues.bw
+type bigWig
+shortLabel acetylation_pvalues
+longLabel acetylation_pvalues data
+visibility full
+
+track methylation_12_24h
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/methylation_12_24h.bw
+type bigWig
+shortLabel methylation_12_24h
+longLabel methylation_12_24h data
+visibility full
+
+track methylation_pvalues
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/methylation_pvalues.bw
+type bigWig
+shortLabel methylation_pvalues
+longLabel methylation_pvalues data
+visibility full
+
+track methylationh
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/methylationh.bw
+type bigWig
+shortLabel methylationh
+longLabel methylationh data
+visibility full
+

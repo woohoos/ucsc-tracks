@@ -1,6 +1,6 @@
 github_user <- "woohoos"
 repo_name <- "ucsc-tracks"
-base_url <- paste0("https://raw.githubusercontent.com/", github_user, "/", repo_name, "/main/tracks/")
+base_url <- paste0("https://raw.githubusercontent.com/", github_user, "/", repo_name, "/main/")
 
 # Extensions
 track_types <- list(

@@ -29,7 +29,7 @@ for (folder in track_dirs) {
                 "visibility full",
                 "aggregate transparentOverlay",  # Grouped auto-scaling
                 "autoScale on",  # Scale based on visible tracks
-                "maxHeightPixels 100:100:20",  # Height of the tracks
+                "maxHeightPixels 100:50:20",  # Height of the tracks
                 ""
   )
   

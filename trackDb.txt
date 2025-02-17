@@ -6,7 +6,7 @@ longLabel Group: B32
 visibility full
 aggregate transparentOverlay
 autoScale on
-maxHeightPixels 100:100:20
+maxHeightPixels 100:50:20
 
 track acetylation_12_24h
 parent super_B32 on
@@ -15,6 +15,15 @@ type bigWig
 shortLabel acetylation_12_24h
 longLabel acetylation_12_24h (B32)
 color 63,127,9
+visibility full
+
+track methylation_12_2
+parent super_B32 on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylation_12_2.bw
+type bigWig
+shortLabel methylation_12_2
+longLabel methylation_12_2 (B32)
+color 0,0,255
 visibility full
 
 track methylation_12_24h
@@ -34,7 +43,7 @@ longLabel Group: B32_raw
 visibility full
 aggregate transparentOverlay
 autoScale on
-maxHeightPixels 100:100:20
+maxHeightPixels 100:50:20
 
 track BW_A1_N-B32_7
 parent super_B32_raw on

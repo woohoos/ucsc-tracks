@@ -68,3 +68,59 @@ for (folder in track_dirs) {
 
 writeLines(track_db, "trackDb.txt")
 cat("UCSC updated!\n")
+
+
+
+# MultiWig Track Configuration to Append at the End
+multiWig_config <- c(
+  "track multiWig1",
+  "type bigWig",
+  "container multiWig",
+  "shortLabel Ex. multiWig container",
+  "longLabel This multiWig overlay track graphs points from three bigWig files.",
+  "visibility full",
+  "aggregate transparentOverlay",
+  "showSubtrackColorOnUi on",
+  "maxHeightPixels 500:100:8",
+  "viewLimits 1:20",
+  "priority 1",
+  "html examplePage",
+  "",
+  "    track wig1",
+  "    bigDataUrl http://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeCshlLongRnaSeq/wgEncodeCshlLongRnaSeqA549CellLongnonpolyaMinusRawSigRep1.bigWig",
+  "    shortLabel Overlay bigWig1",
+  "    longLabel This is an example bigWig1 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.",
+  "    parent multiWig1",
+  "    graphTypeDefault points",
+  "    type bigWig",
+  "    color 255,0,0",
+  "",
+  "    track wig2",
+  "    bigDataUrl http://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeCshlLongRnaSeq/wgEncodeCshlLongRnaSeqA549CellLongnonpolyaPlusRawSigRep1.bigWig",
+  "    shortLabel Overlay bigWig2",
+  "    longLabel This is an example bigWig2 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.",
+  "    graphTypeDefault points",
+  "    parent multiWig1",
+  "    type bigWig",
+  "    color 0,255,0",
+  "",
+  "    track wig3",
+  "    bigDataUrl http://hgdownload.soe.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeCshlLongRnaSeq/wgEncodeCshlLongRnaSeqAg04450CellLongnonpolyaPlusRawSigRep1.bigWig",
+  "    shortLabel Overlay bigWig3",
+  "    longLabel This is an example bigWig3 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.",
+  "    graphTypeDefault points",
+  "    parent multiWig1",
+  "    type bigWig",
+  "    color 95,158,160",
+  ""
+)
+
+# Combine existing tracks and multiWig config
+track_db <- c(track_db, multiWig_config)
+
+# Write to trackDb.txt
+writeLines(track_db, "trackDb.txt")
+
+cat("✅ UCSC trackDb.txt updated with multiWig track!\n")
+
+

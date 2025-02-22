@@ -14,7 +14,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel acetylation_12_24h
 longLabel acetylation_12_24h (B32)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track methylation_12_2
@@ -51,7 +51,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A1_N-B32_7
 longLabel BW_A1_N-B32_7 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A10_N-B32_8
@@ -60,7 +60,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A10_N-B32_8
 longLabel BW_A10_N-B32_8 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A11_N-B32_4
@@ -69,7 +69,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A11_N-B32_4
 longLabel BW_A11_N-B32_4 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A12_N-B32_6
@@ -78,7 +78,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A12_N-B32_6
 longLabel BW_A12_N-B32_6 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A2_N-B32_11
@@ -87,7 +87,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A2_N-B32_11
 longLabel BW_A2_N-B32_11 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A3_N-B32_2
@@ -96,7 +96,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A3_N-B32_2
 longLabel BW_A3_N-B32_2 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A4_N-B32_5
@@ -105,7 +105,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A4_N-B32_5
 longLabel BW_A4_N-B32_5 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A5_N-B32_9
@@ -114,7 +114,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A5_N-B32_9
 longLabel BW_A5_N-B32_9 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A6_N-B32_12
@@ -123,7 +123,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A6_N-B32_12
 longLabel BW_A6_N-B32_12 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A7_N-B32_3
@@ -132,7 +132,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A7_N-B32_3
 longLabel BW_A7_N-B32_3 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A8_N-B32_10
@@ -141,7 +141,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A8_N-B32_10
 longLabel BW_A8_N-B32_10 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_A9_N-B32_1
@@ -150,7 +150,7 @@ bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32
 type bigWig
 shortLabel BW_A9_N-B32_1
 longLabel BW_A9_N-B32_1 (B32_raw)
-color 63,127,9
+color 0,128,0
 visibility full
 
 track BW_K10_N-B32_8
@@ -279,34 +279,43 @@ longLabel BW_M9_N-B32_1 (B32_raw)
 color 0,0,255
 visibility full
 
-track multiWig1
+track super_seq_B32
+superTrack on
+group custom
+shortLabel seq_B32 Collection
+longLabel Group: seq_B32
+visibility full
+aggregate transparentOverlay
+autoScale on
+maxHeightPixels 100:50:20
+
+track multiwig_seq_B32
 type bigWig
 container multiWig
-shortLabel Ex. multiWig container
-longLabel This multiWig overlay track graphs points from three bigWig files.
+shortLabel seq_B32 RNA-seq
+longLabel RNA-seq (Strand-Specific) - seq_B32
 visibility full
 aggregate transparentOverlay
 showSubtrackColorOnUi on
 maxHeightPixels 500:100:8
 viewLimits 1:20
 priority 1
-html examplePage
 
-    track wig2
-    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135be319e19b96eb13a/display?to_ext=bigwig
-    shortLabel Overlay bigWig2
-    longLabel This is an example bigWig2 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.
+    track example_plus
+    parent multiwig_seq_B32
+    bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/seq_B32/example_plus.bw
+    shortLabel example_plus
+    longLabel RNA-seq Plus Strand - seq_B32
     graphTypeDefault points
-    parent multiWig1
     type bigWig
-    color 0,255,0
+    color 0,0,255
 
-    track wig3
-    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ba3c1bdbb1059f37/display?to_ext=bigwig
-    shortLabel Overlay bigWig3
-    longLabel This is an example bigWig3 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.
+    track example_minus
+    parent multiwig_seq_B32
+    bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/seq_B32/example_minus.bw
+    shortLabel example_minus
+    longLabel RNA-seq Minus Strand - seq_B32
     graphTypeDefault points
-    parent multiWig1
     type bigWig
-    color 95,158,160
+    color 255,0,0
 

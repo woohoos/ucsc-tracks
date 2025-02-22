@@ -8,9 +8,9 @@ track_types <- list(
   ".bigBed" = "bigBed"
 )
 
-color_blue <- "0,0,255"         # methylation
-color_red <- "255,0,0"          # pvalue/control
-color_green <- "63,127,9"       # acetylation 
+color_plus <- "0,0,255"         # Blue for Plus strand
+color_minus <- "255,0,0"        # Red for Minus strand
+color_strandless <- "0,128,0"   # Green for Strandless
 color_default <- "0,0,0"        
 
 track_dirs <- list.dirs("tracks", recursive = FALSE)
@@ -27,91 +27,122 @@ for (folder in track_dirs) {
                 paste0("shortLabel ", folder_name, " Collection"),
                 paste0("longLabel Group: ", folder_name),
                 "visibility full",
-                "aggregate transparentOverlay",  # Grouped auto-scaling
-                "autoScale on",  # Scale based on visible tracks
-                "maxHeightPixels 100:50:20",  # Height of the tracks
+                "aggregate transparentOverlay",
+                "autoScale on",
+                "maxHeightPixels 100:50:20",
                 ""
   )
   
-  track_files <- list.files(folder, pattern = paste0("\\", names(track_types), collapse = "|"), full.names = FALSE)
+  track_files <- list.files(folder, pattern = "\\.bw$", full.names = FALSE)
   
-  for (track in track_files) {
-    ext <- tools::file_ext(track)
-    track_type <- track_types[[paste0(".", ext)]]
-    track_name <- sub(paste0(".", ext, "$"), "", track)
+  # Check if the folder starts with "seq_"
+  if (grepl("^seq_", folder_name)) {
+    # Separate plus, minus, and strandless files
+    plus_files <- grep("_plus\\.bw$", track_files, value = TRUE)
+    minus_files <- grep("_minus\\.bw$", track_files, value = TRUE)
+    strandless_files <- grep("_strandless\\.bw$", track_files, value = TRUE)
     
-    track_path <- paste0(folder, "/", track)
-    
-    if (grepl("methylation|BW_M", track, ignore.case = TRUE)) {
-      track_color <- color_blue
-    } else if (grepl("pvalue|control|kontrol|^BW_K", track, ignore.case = TRUE)) {
-      track_color <- color_red
-    } else if (grepl("acetylation|^BW_A", track, ignore.case = TRUE)) {
-      track_color <- color_green
-    } else {
-      track_color <- color_default
+    # Process strand-specific tracks into a single multiWig container
+    if (length(plus_files) > 0 && length(minus_files) > 0) {
+      multiwig_name <- paste0("multiwig_", folder_name)
+      
+      track_db <- c(track_db,
+                    paste0("track ", multiwig_name),
+                    "type bigWig",
+                    "container multiWig",
+                    paste0("shortLabel ", folder_name, " RNA-seq"),
+                    paste0("longLabel RNA-seq (Strand-Specific) - ", folder_name),
+                    "visibility full",
+                    "aggregate transparentOverlay",
+                    "showSubtrackColorOnUi on",
+                    "maxHeightPixels 500:100:8",
+                    "viewLimits 1:20",
+                    "priority 1",
+                    ""
+      )
+      
+      # Add plus strand to the multiWig track
+      for (track in plus_files) {
+        track_name <- sub("\\.bw$", "", track)
+        track_db <- c(track_db,
+                      paste0("    track ", track_name),
+                      paste0("    parent ", multiwig_name),
+                      paste0("    bigDataUrl ", base_url, folder, "/", track),
+                      paste0("    shortLabel ", track_name),
+                      paste0("    longLabel RNA-seq Plus Strand - ", folder_name),
+                      "    graphTypeDefault points",
+                      "    type bigWig",
+                      paste0("    color ", color_plus),
+                      ""
+        )
+      }
+      
+      # Add minus strand to the multiWig track
+      for (track in minus_files) {
+        track_name <- sub("\\.bw$", "", track)
+        track_db <- c(track_db,
+                      paste0("    track ", track_name),
+                      paste0("    parent ", multiwig_name),
+                      paste0("    bigDataUrl ", base_url, folder, "/", track),
+                      paste0("    shortLabel ", track_name),
+                      paste0("    longLabel RNA-seq Minus Strand - ", folder_name),
+                      "    graphTypeDefault points",
+                      "    type bigWig",
+                      paste0("    color ", color_minus),
+                      ""
+        )
+      }
     }
     
-    track_db <- c(track_db,
-                  paste0("track ", track_name),
-                  paste0("parent ", super_track_name, " on"), 
-                  paste0("bigDataUrl ", base_url, track_path),
-                  paste0("type ", track_type),
-                  paste0("shortLabel ", track_name),
-                  paste0("longLabel ", track_name, " (", folder_name, ")"),
-                  paste0("color ", track_color),
-                  "visibility full",
-                  ""
-    )
+    # Process strandless tracks separately
+    for (track in strandless_files) {
+      track_name <- sub("\\.bw$", "", track)
+      track_db <- c(track_db,
+                    paste0("track ", track_name),
+                    paste0("parent ", super_track_name, " on"), 
+                    paste0("bigDataUrl ", base_url, folder, "/", track),
+                    "type bigWig",
+                    paste0("shortLabel ", track_name),
+                    paste0("longLabel RNA-seq Strandless - ", folder_name),
+                    paste0("color ", color_strandless),
+                    "visibility full",
+                    ""
+      )
+    }
+    
+  } else {
+    # Default behavior for all other directories
+    for (track in track_files) {
+      ext <- tools::file_ext(track)
+      track_type <- track_types[[paste0(".", ext)]]
+      track_name <- sub(paste0(".", ext, "$"), "", track)
+      track_path <- paste0(folder, "/", track)
+      
+      # Assign colors based on track name
+      if (grepl("methylation|BW_M", track, ignore.case = TRUE)) {
+        track_color <- color_plus
+      } else if (grepl("pvalue|control|kontrol|^BW_K", track, ignore.case = TRUE)) {
+        track_color <- color_minus
+      } else if (grepl("acetylation|^BW_A", track, ignore.case = TRUE)) {
+        track_color <- color_strandless
+      } else {
+        track_color <- color_default
+      }
+      
+      # Add track entry
+      track_db <- c(track_db,
+                    paste0("track ", track_name),
+                    paste0("parent ", super_track_name, " on"), 
+                    paste0("bigDataUrl ", base_url, track_path),
+                    paste0("type ", track_type),
+                    paste0("shortLabel ", track_name),
+                    paste0("longLabel ", track_name, " (", folder_name, ")"),
+                    paste0("color ", track_color),
+                    "visibility full",
+                    ""
+      )
+    }
   }
 }
 
 writeLines(track_db, "trackDb.txt")
-cat("UCSC updated!\n")
-
-
-
-# MultiWig Track Configuration to Append at the End
-multiWig_config <- c(
-  "track multiWig1",
-  "type bigWig",
-  "container multiWig",
-  "shortLabel Ex. multiWig container",
-  "longLabel This multiWig overlay track graphs points from three bigWig files.",
-  "visibility full",
-  "aggregate transparentOverlay",
-  "showSubtrackColorOnUi on",
-  "maxHeightPixels 500:100:8",
-  "viewLimits 1:20",
-  "priority 1",
-  "html examplePage",
-  "",
-  "    track wig2",
-  "    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135be319e19b96eb13a/display?to_ext=bigwig",
-  "    shortLabel Overlay bigWig2",
-  "    longLabel This is an example bigWig2 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.",
-  "    graphTypeDefault points",
-  "    parent multiWig1",
-  "    type bigWig",
-  "    color 0,255,0",
-  "",
-  "    track wig3",
-  "    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ba3c1bdbb1059f37/display?to_ext=bigwig",
-  "    shortLabel Overlay bigWig3",
-  "    longLabel This is an example bigWig3 displaying Raw Signal from the ENCODE RNA-seq CSHL track, graphing just points as default.",
-  "    graphTypeDefault points",
-  "    parent multiWig1",
-  "    type bigWig",
-  "    color 95,158,160",
-  ""
-)
-
-# Combine existing tracks and multiWig config
-track_db <- c(track_db, multiWig_config)
-
-# Write to trackDb.txt
-writeLines(track_db, "trackDb.txt")
-
-cat("✅ UCSC trackDb.txt updated with multiWig track!\n")
-
-

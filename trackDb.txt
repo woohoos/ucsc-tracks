@@ -298,7 +298,6 @@ visibility full
 aggregate transparentOverlay
 showSubtrackColorOnUi on
 maxHeightPixels 500:100:8
-viewLimits 1:20
 priority 1
 
     track example_plus
@@ -306,7 +305,7 @@ priority 1
     bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/seq_B32/example_plus.bw
     shortLabel example_plus
     longLabel RNA-seq Plus Strand - seq_B32
-    graphTypeDefault points
+    graphTypeDefault bar
     type bigWig
     color 0,0,255
 
@@ -315,7 +314,7 @@ priority 1
     bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/seq_B32/example_minus.bw
     shortLabel example_minus
     longLabel RNA-seq Minus Strand - seq_B32
-    graphTypeDefault points
+    graphTypeDefault bar
     type bigWig
     color 255,0,0
 

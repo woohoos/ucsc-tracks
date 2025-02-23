@@ -56,7 +56,6 @@ for (folder in track_dirs) {
                     "aggregate transparentOverlay",
                     "showSubtrackColorOnUi on",
                     "maxHeightPixels 500:100:8",
-                    "viewLimits 1:20",
                     "priority 1",
                     ""
       )
@@ -70,7 +69,7 @@ for (folder in track_dirs) {
                       paste0("    bigDataUrl ", base_url, folder, "/", track),
                       paste0("    shortLabel ", track_name),
                       paste0("    longLabel RNA-seq Plus Strand - ", folder_name),
-                      "    graphTypeDefault points",
+                      "    graphTypeDefault bar",
                       "    type bigWig",
                       paste0("    color ", color_plus),
                       ""
@@ -86,7 +85,7 @@ for (folder in track_dirs) {
                       paste0("    bigDataUrl ", base_url, folder, "/", track),
                       paste0("    shortLabel ", track_name),
                       paste0("    longLabel RNA-seq Minus Strand - ", folder_name),
-                      "    graphTypeDefault points",
+                      "    graphTypeDefault bar",
                       "    type bigWig",
                       paste0("    color ", color_minus),
                       ""

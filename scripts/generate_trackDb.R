@@ -36,7 +36,7 @@ for (folder in track_dirs) {
   track_files <- list.files(folder, pattern = "\\.bw$", full.names = FALSE)
   
   # Check if the folder starts with "seq_"
-  if (grepl("^seq_", folder_name)) {
+  if (grepl("^rna_", folder_name)) {
     # Separate plus, minus, and strandless files
     plus_files <- grep("_plus\\.bw$", track_files, value = TRUE)
     minus_files <- grep("_minus\\.bw$", track_files, value = TRUE)

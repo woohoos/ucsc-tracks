@@ -1,299 +1,299 @@
-track super_B32
+track super_cnr_B32
 superTrack on
 group custom
-shortLabel B32 Collection
-longLabel Group: B32
+shortLabel cnr_B32 Collection
+longLabel Group: cnr_B32
 visibility full
 aggregate transparentOverlay
 autoScale on
 maxHeightPixels 100:50:20
 
 track acetylation_12_24h
-parent super_B32 on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/acetylation_12_24h.bw
+parent super_cnr_B32 on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32/acetylation_12_24h.bw
 type bigWig
 shortLabel acetylation_12_24h
-longLabel acetylation_12_24h (B32)
+longLabel acetylation_12_24h (cnr_B32)
 color 0,128,0
 visibility full
 
 track methylation_12_2
-parent super_B32 on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylation_12_2.bw
+parent super_cnr_B32 on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32/methylation_12_2.bw
 type bigWig
 shortLabel methylation_12_2
-longLabel methylation_12_2 (B32)
+longLabel methylation_12_2 (cnr_B32)
 color 0,0,255
 visibility full
 
 track methylation_12_24h
-parent super_B32 on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32/methylation_12_24h.bw
+parent super_cnr_B32 on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32/methylation_12_24h.bw
 type bigWig
 shortLabel methylation_12_24h
-longLabel methylation_12_24h (B32)
+longLabel methylation_12_24h (cnr_B32)
 color 0,0,255
 visibility full
 
-track super_B32_raw
+track super_cnr_B32_raw
 superTrack on
 group custom
-shortLabel B32_raw Collection
-longLabel Group: B32_raw
+shortLabel cnr_B32_raw Collection
+longLabel Group: cnr_B32_raw
 visibility full
 aggregate transparentOverlay
 autoScale on
 maxHeightPixels 100:50:20
 
 track BW_A1_N-B32_7
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A1_N-B32_7.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A1_N-B32_7.bw
 type bigWig
 shortLabel BW_A1_N-B32_7
-longLabel BW_A1_N-B32_7 (B32_raw)
+longLabel BW_A1_N-B32_7 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A10_N-B32_8
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A10_N-B32_8.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A10_N-B32_8.bw
 type bigWig
 shortLabel BW_A10_N-B32_8
-longLabel BW_A10_N-B32_8 (B32_raw)
+longLabel BW_A10_N-B32_8 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A11_N-B32_4
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A11_N-B32_4.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A11_N-B32_4.bw
 type bigWig
 shortLabel BW_A11_N-B32_4
-longLabel BW_A11_N-B32_4 (B32_raw)
+longLabel BW_A11_N-B32_4 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A12_N-B32_6
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A12_N-B32_6.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A12_N-B32_6.bw
 type bigWig
 shortLabel BW_A12_N-B32_6
-longLabel BW_A12_N-B32_6 (B32_raw)
+longLabel BW_A12_N-B32_6 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A2_N-B32_11
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A2_N-B32_11.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A2_N-B32_11.bw
 type bigWig
 shortLabel BW_A2_N-B32_11
-longLabel BW_A2_N-B32_11 (B32_raw)
+longLabel BW_A2_N-B32_11 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A3_N-B32_2
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A3_N-B32_2.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A3_N-B32_2.bw
 type bigWig
 shortLabel BW_A3_N-B32_2
-longLabel BW_A3_N-B32_2 (B32_raw)
+longLabel BW_A3_N-B32_2 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A4_N-B32_5
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A4_N-B32_5.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A4_N-B32_5.bw
 type bigWig
 shortLabel BW_A4_N-B32_5
-longLabel BW_A4_N-B32_5 (B32_raw)
+longLabel BW_A4_N-B32_5 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A5_N-B32_9
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A5_N-B32_9.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A5_N-B32_9.bw
 type bigWig
 shortLabel BW_A5_N-B32_9
-longLabel BW_A5_N-B32_9 (B32_raw)
+longLabel BW_A5_N-B32_9 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A6_N-B32_12
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A6_N-B32_12.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A6_N-B32_12.bw
 type bigWig
 shortLabel BW_A6_N-B32_12
-longLabel BW_A6_N-B32_12 (B32_raw)
+longLabel BW_A6_N-B32_12 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A7_N-B32_3
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A7_N-B32_3.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A7_N-B32_3.bw
 type bigWig
 shortLabel BW_A7_N-B32_3
-longLabel BW_A7_N-B32_3 (B32_raw)
+longLabel BW_A7_N-B32_3 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A8_N-B32_10
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A8_N-B32_10.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A8_N-B32_10.bw
 type bigWig
 shortLabel BW_A8_N-B32_10
-longLabel BW_A8_N-B32_10 (B32_raw)
+longLabel BW_A8_N-B32_10 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_A9_N-B32_1
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_A9_N-B32_1.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_A9_N-B32_1.bw
 type bigWig
 shortLabel BW_A9_N-B32_1
-longLabel BW_A9_N-B32_1 (B32_raw)
+longLabel BW_A9_N-B32_1 (cnr_B32_raw)
 color 0,128,0
 visibility full
 
 track BW_K10_N-B32_8
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_K10_N-B32_8.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_K10_N-B32_8.bw
 type bigWig
 shortLabel BW_K10_N-B32_8
-longLabel BW_K10_N-B32_8 (B32_raw)
+longLabel BW_K10_N-B32_8 (cnr_B32_raw)
 color 255,0,0
 visibility full
 
 track BW_K4_N-B32_5
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_K4_N-B32_5.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_K4_N-B32_5.bw
 type bigWig
 shortLabel BW_K4_N-B32_5
-longLabel BW_K4_N-B32_5 (B32_raw)
+longLabel BW_K4_N-B32_5 (cnr_B32_raw)
 color 255,0,0
 visibility full
 
 track BW_M1_N-B32_7
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M1_N-B32_7.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M1_N-B32_7.bw
 type bigWig
 shortLabel BW_M1_N-B32_7
-longLabel BW_M1_N-B32_7 (B32_raw)
+longLabel BW_M1_N-B32_7 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M10_N-B32_8
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M10_N-B32_8.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M10_N-B32_8.bw
 type bigWig
 shortLabel BW_M10_N-B32_8
-longLabel BW_M10_N-B32_8 (B32_raw)
+longLabel BW_M10_N-B32_8 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M11_N-B32_4
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M11_N-B32_4.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M11_N-B32_4.bw
 type bigWig
 shortLabel BW_M11_N-B32_4
-longLabel BW_M11_N-B32_4 (B32_raw)
+longLabel BW_M11_N-B32_4 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M12_N-B32_6
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M12_N-B32_6.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M12_N-B32_6.bw
 type bigWig
 shortLabel BW_M12_N-B32_6
-longLabel BW_M12_N-B32_6 (B32_raw)
+longLabel BW_M12_N-B32_6 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M2_N-B32_11
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M2_N-B32_11.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M2_N-B32_11.bw
 type bigWig
 shortLabel BW_M2_N-B32_11
-longLabel BW_M2_N-B32_11 (B32_raw)
+longLabel BW_M2_N-B32_11 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M3_N-B32_2
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M3_N-B32_2.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M3_N-B32_2.bw
 type bigWig
 shortLabel BW_M3_N-B32_2
-longLabel BW_M3_N-B32_2 (B32_raw)
+longLabel BW_M3_N-B32_2 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M4_N-B32_5
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M4_N-B32_5.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M4_N-B32_5.bw
 type bigWig
 shortLabel BW_M4_N-B32_5
-longLabel BW_M4_N-B32_5 (B32_raw)
+longLabel BW_M4_N-B32_5 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M5_N-B32_9
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M5_N-B32_9.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M5_N-B32_9.bw
 type bigWig
 shortLabel BW_M5_N-B32_9
-longLabel BW_M5_N-B32_9 (B32_raw)
+longLabel BW_M5_N-B32_9 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M6_N-B32_12
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M6_N-B32_12.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M6_N-B32_12.bw
 type bigWig
 shortLabel BW_M6_N-B32_12
-longLabel BW_M6_N-B32_12 (B32_raw)
+longLabel BW_M6_N-B32_12 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M7_N-B32_3
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M7_N-B32_3.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M7_N-B32_3.bw
 type bigWig
 shortLabel BW_M7_N-B32_3
-longLabel BW_M7_N-B32_3 (B32_raw)
+longLabel BW_M7_N-B32_3 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M8_N-B32_10
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M8_N-B32_10.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M8_N-B32_10.bw
 type bigWig
 shortLabel BW_M8_N-B32_10
-longLabel BW_M8_N-B32_10 (B32_raw)
+longLabel BW_M8_N-B32_10 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
 track BW_M9_N-B32_1
-parent super_B32_raw on
-bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/B32_raw/BW_M9_N-B32_1.bw
+parent super_cnr_B32_raw on
+bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/cnr_B32_raw/BW_M9_N-B32_1.bw
 type bigWig
 shortLabel BW_M9_N-B32_1
-longLabel BW_M9_N-B32_1 (B32_raw)
+longLabel BW_M9_N-B32_1 (cnr_B32_raw)
 color 0,0,255
 visibility full
 
-track super_seq_B32
+track super_rna_B32
 superTrack on
 group custom
-shortLabel seq_B32 Collection
-longLabel Group: seq_B32
+shortLabel rna_B32 Collection
+longLabel Group: rna_B32
 visibility full
 aggregate transparentOverlay
 autoScale on
 maxHeightPixels 100:50:20
 
-track multiwig_seq_B32
+track multiwig_rna_B32
 type bigWig
 container multiWig
-shortLabel seq_B32 RNA-seq
-longLabel RNA-seq (Strand-Specific) - seq_B32
+shortLabel rna_B32 RNA-seq
+longLabel RNA-seq (Strand-Specific) - rna_B32
 visibility full
 aggregate transparentOverlay
 showSubtrackColorOnUi on
@@ -301,19 +301,19 @@ maxHeightPixels 500:100:8
 priority 1
 
     track example_plus
-    parent multiwig_seq_B32
-    bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/seq_B32/example_plus.bw
+    parent multiwig_rna_B32
+    bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/rna_B32/example_plus.bw
     shortLabel example_plus
-    longLabel RNA-seq Plus Strand - seq_B32
+    longLabel RNA-seq Plus Strand - rna_B32
     graphTypeDefault bar
     type bigWig
     color 0,0,255
 
     track example_minus
-    parent multiwig_seq_B32
-    bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/seq_B32/example_minus.bw
+    parent multiwig_rna_B32
+    bigDataUrl https://raw.githubusercontent.com/woohoos/ucsc-tracks/main/tracks/rna_B32/example_minus.bw
     shortLabel example_minus
-    longLabel RNA-seq Minus Strand - seq_B32
+    longLabel RNA-seq Minus Strand - rna_B32
     graphTypeDefault bar
     type bigWig
     color 255,0,0

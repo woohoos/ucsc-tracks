@@ -35,14 +35,12 @@ for (folder in track_dirs) {
   
   track_files <- list.files(folder, pattern = "\\.bw$", full.names = FALSE)
   
-  # Check if the folder starts with "seq_"
   if (grepl("^rna_", folder_name)) {
     # Separate plus, minus, and strandless files
     plus_files <- grep("_plus\\.bw$", track_files, value = TRUE)
     minus_files <- grep("_minus\\.bw$", track_files, value = TRUE)
     strandless_files <- grep("_strandless\\.bw$", track_files, value = TRUE)
     
-    # Process strand-specific tracks into a single multiWig container
     if (length(plus_files) > 0 && length(minus_files) > 0) {
       multiwig_name <- paste0("multiwig_", folder_name)
       
@@ -60,7 +58,7 @@ for (folder in track_dirs) {
                     ""
       )
       
-      # Add plus strand to the multiWig track
+      # Plus strand
       for (track in plus_files) {
         track_name <- sub("\\.bw$", "", track)
         track_db <- c(track_db,
@@ -76,7 +74,7 @@ for (folder in track_dirs) {
         )
       }
       
-      # Add minus strand to the multiWig track
+      # Minus strand
       for (track in minus_files) {
         track_name <- sub("\\.bw$", "", track)
         track_db <- c(track_db,
@@ -93,7 +91,7 @@ for (folder in track_dirs) {
       }
     }
     
-    # Process strandless tracks separately
+    # Strandless tracks
     for (track in strandless_files) {
       track_name <- sub("\\.bw$", "", track)
       track_db <- c(track_db,
@@ -110,14 +108,13 @@ for (folder in track_dirs) {
     }
     
   } else {
-    # Default behavior for all other directories
+    # Rest will be cut and run data
     for (track in track_files) {
       ext <- tools::file_ext(track)
       track_type <- track_types[[paste0(".", ext)]]
       track_name <- sub(paste0(".", ext, "$"), "", track)
       track_path <- paste0(folder, "/", track)
       
-      # Assign colors based on track name
       if (grepl("methylation|BW_M", track, ignore.case = TRUE)) {
         track_color <- color_plus
       } else if (grepl("pvalue|control|kontrol|^BW_K", track, ignore.case = TRUE)) {
@@ -128,7 +125,6 @@ for (folder in track_dirs) {
         track_color <- color_default
       }
       
-      # Add track entry
       track_db <- c(track_db,
                     paste0("track ", track_name),
                     paste0("parent ", super_track_name, " on"), 
